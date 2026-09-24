@@ -4,6 +4,7 @@
 #include "Model.h"
 #include "InputSignal.h"
 #include <string>
+#include <filesystem>
 
 class Simulator {
 public:
