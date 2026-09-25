@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <windows.h>
 
 void Simulator::run(
     Model& model,
@@ -14,7 +15,7 @@ void Simulator::run(
     std::ofstream file(fileName);
 
     if (!file.is_open()) {
-        std::cout << "Îøèáêà îòêðûòèÿ ôàéëà " << fileName << std::endl;
+        std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°: " << fileName << std::endl;
         return;
     }
 
@@ -62,5 +63,5 @@ void Simulator::run(
 
     file.close();
 
-    std::cout << "\nÐåçóëüòàòû ñîõðàíåíû â: " << fileName << std::endl;
+    std::cout << "\nÐ ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ñ‹ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ñ‹ Ð²: " << fileName << std::endl;
 }

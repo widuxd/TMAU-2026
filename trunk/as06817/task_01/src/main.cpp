@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <windows.h>
 
 #include "Model17.h"
 #include "Model21.h"
@@ -7,32 +8,33 @@
 #include "Simulator.h"
 
 int main() {
-    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
     int n;
 
-    std::cout << " Ëàáîðàòîðíàÿ ðàáîòà 1\n";
-    std::cout << " ÒèÌAÓ, âàðèàíò 17\n";
+    std::cout << "Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ð° 1\n";
+    std::cout << "Ð¢Ð¸ÐœAÐ£, Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚ 17\n";
 
-    std::cout << "Ââåäèòå êîëè÷åñòâî øàãîâ n: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑˆÐ°Ð³Ð¾Ð² n: ";
     std::cin >> n;
 
     if (n <= 0) {
-        std::cout << "Êîëè÷åñòâî øàãîâ äîëæíî áûòü áîëüøå 0.\n";
+        std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑˆÐ°Ð³Ð¾Ð² Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0.\n";
         return 1;
     }
 
     int signalChoice;
 
-    std::cout << "\nÂûáåðèòå âõîäíîå âîçäåéñòâèå:\n";
-    std::cout << "1 - ñòóïåí÷àòîå\n";
-    std::cout << "2 - èìïóëüñíîå\n";
-    std::cout << "3 - ãàðìîíè÷åñêîå\n";
-    std::cout << "Âàø âûáîð: ";
+    std::cout << "\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð²Ñ…Ð¾Ð´Ð½Ð¾Ðµ Ð²Ð¾Ð·Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:\n";
+    std::cout << "1 - ÑÑ‚ÑƒÐ¿ÐµÐ½Ñ‡Ð°Ñ‚Ð¾Ðµ\n";
+    std::cout << "2 - Ð¸Ð¼Ð¿ÑƒÐ»ÑŒÑÐ½Ð¾Ðµ\n";
+    std::cout << "3 - Ð³Ð°Ñ€Ð¼Ð¾Ð½Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ\n";
+    std::cout << "Ð’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
     std::cin >> signalChoice;
 
     if (signalChoice < 1 || signalChoice > 3) {
-        std::cout << "Íåâåðíûé âûáîð.\n";
+        std::cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€.\n";
         return 1;
     }
 
@@ -73,7 +75,7 @@ int main() {
         "model35.csv"
     );
 
-    std::cout << "\nÌîäåëèðîâàíèå çàâåðøåíî.\n";
+    std::cout << "\nÐœÐ¾Ð´ÐµÐ»Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¾.\n";
 
     return 0;
 }
